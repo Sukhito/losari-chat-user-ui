@@ -1,8 +1,13 @@
+<style>
+    #chat-window{
+        height: 600px;
+    }
+</style>
 <button class="btn btn-primary" type="button">
     You are logged in as {{user.name}} with id {{user.id}}
 </button>
 
-<table class="table">
+<table class="table chat-window">
     <tr ng-repeat="chat in chats">
         <td>{{chat.name}} {{chat.body}}</td>
     </tr>
