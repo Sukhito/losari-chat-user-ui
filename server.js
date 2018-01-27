@@ -29,7 +29,7 @@ app.use(bodyParser.urlencoded({extended : true}));
 app.use(methodOverride('X-HTTP-Method-Override'));
 app.use(express.static(__dirname + '/public'));
 
-require('./routes/chat')(app);
+require('./routes/conversations')(app);
 
 app.listen(port);
 console.log("Su-uS is Up and Running, Server at " + port + " with ip address "  + ip.address());
