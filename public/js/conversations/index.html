@@ -1,0 +1,9 @@
+<button class="btn btn-primary" type="button">
+    You are logged in as {{user.name}} with id {{user.id}}
+</button>
+
+<table class="table">
+    <tr ng-repeat="chat in chats">
+        <td>{{chat.name}} {{chat.body}}</td>
+    </tr>
+</table>
