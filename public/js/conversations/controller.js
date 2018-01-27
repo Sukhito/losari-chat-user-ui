@@ -9,6 +9,10 @@ app.controller('ConversationCtrl',function($scope,ConversationService){
 
             $scope.conversation = response.data[0];
             $scope.chats = JSON.parse($scope.conversation.chats);
+
+            $scope.send = function(){
+                alert("send");
+            }
         }
     )
 })

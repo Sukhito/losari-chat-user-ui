@@ -1,6 +1,7 @@
 <style>
     #chat-window{
         height: 600px;
+        background-color: aqua;
     }
 </style>
 <button class="btn btn-primary" type="button">
@@ -9,6 +10,11 @@
 
 <table class="table chat-window">
     <tr ng-repeat="chat in chats">
-        <td>{{chat.name}} {{chat.body}}</td>
+        <td>{{chat.date|date:'HH:mm:ss'}} {{chat.name}} : {{chat.body}}</td>
     </tr>
 </table>
+
+<div>
+    <input type="text" class="form-control">
+    <button type="button" class="btn btn-danger" ng-click="send()">Action</button>
+</div>
