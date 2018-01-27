@@ -4,8 +4,18 @@ var app             =   express();
 var ip				=   require('ip');
 var mysql           =   require('mysql');
 
+//connect to mysql
+var con = mysql.createConnection({
+  host: "localhost",
+  user: "root",
+  password: "101089"
+});
 
-var mongoose        =   require('mongoose');
+con.connect(function(err) {
+  if (err) throw err;
+  console.log("Connected!");
+});
+
 var bodyParser      =   require('body-parser');
 var methodOverride  =   require('method-override');
 

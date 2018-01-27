@@ -14,8 +14,6 @@
     "express": "^4.15.3",
     "ip": "^1.1.5",
     "method-override": "^2.3.9",
-    "mongoose": "^4.11.4",
-    "mysql": "^2.15.0",
-    "node-thermal-printer": "^1.0.5"
+    "mysql": "^2.15.0"
   }
 }
