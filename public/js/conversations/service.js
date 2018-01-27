@@ -2,10 +2,10 @@ app.factory('ConversationService',function($http){
     return{
         getConversation: function(){
             return $http.get('api/conversations');
-        }
-        // createItem: function(newItem){
-        //     return $http.post('api/items',newItem);
-        // },
+        },
+        sendChat: function(newChat){
+            return $http.post('api/conversations',newChat);
+        },
         // updateItem : function(item){
         //     return $http.put('api/items/' + item._id,item);
         // },
