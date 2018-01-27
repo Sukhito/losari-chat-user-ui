@@ -24,12 +24,24 @@ app.controller('ConversationCtrl',function($scope,ConversationService){
             conversation : $scope.conversation
         }
         ConversationService.sendChat(conversationData).then(function(response){
+            $scope.newChat.body = "";
             if(response.data){
-                console.log(response.data);
+
             }else{
                 alert("Failed");
             }
         });
+
+
     }
+
+    setInterval(function(){ 
+        ConversationService.getConversation().then(
+            function(response){
+                $scope.conversation = response.data[0];
+                $scope.conversation.chats = JSON.parse($scope.conversation.chats);
+            }
+        )
+    }, 1000);
 
 })
